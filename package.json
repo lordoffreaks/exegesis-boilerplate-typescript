@@ -1,0 +1,63 @@
+{
+  "name": "exegesis-typescript-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "tsc -p tsconfig.json --noEmit",
+    "_pretest": "npm run check",
+    "test": "jest",
+    "prebuild": "rm -rf dist",
+    "build": "tsc && cp openapi.yaml dist",
+    "dev": "ts-node ./server.ts",
+    "prestart": "npm run build",
+    "start": "nodemon ./dist/server-compile.js",
+    "prod": "npm run build && npm run start",
+    "format": "prettier --list-different '**/*.{js,ts,tsx}'",
+    "format:fix": "prettier --write '**/*.{js,ts,tsx}'",
+    "fix": "npm run lint:fix && npm run format:fix",
+    "lint": "tslint '{src,test}/**/*.{ts,tsx}' -p .",
+    "lint:fix": "tslint --project tsconfig.lint.json --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "exegesis": "^2.0.1",
+    "exegesis-express": "^1.0.0",
+    "express": "^4.16.3",
+    "js-yaml": "^3.13.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.15",
+    "@types/jest-diff": "^20.0.1",
+    "@types/js-yaml": "^3.12.1",
+    "@types/supertest": "^2.0.7",
+    "@types/typescript": "^2.0.0",
+    "express-openapi-validate": "^0.4.4",
+    "husky": "^2.4.1",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.2.1",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-lint": "^4.5.1",
+    "ts-node": "^8.3.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.5.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

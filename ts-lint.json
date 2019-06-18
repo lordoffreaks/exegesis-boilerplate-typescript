@@ -1,0 +1,17 @@
+{
+    "extends": [
+        "tslint-config-standard",
+        "tslint-config-prettier"
+    ],
+    "rules": {
+        "space-before-function-paren": false,
+        "no-use-before-declare": false,
+        "quotemark": [
+            true,
+            "jsx-double",
+            "single",
+            "avoid-escape"
+        ],
+        "no-trailing-whitespace": true
+    }
+}
