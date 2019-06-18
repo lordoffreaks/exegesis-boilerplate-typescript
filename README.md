@@ -1,4 +1,4 @@
-#Exegesis-Typescript-Example
+# Exegesis Boilerplate Typescript
 
 A sample setup of a Typescript based API which uses Exegesis to work with the OpenAPI spec v3.
 

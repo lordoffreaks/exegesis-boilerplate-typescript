@@ -1,5 +1,5 @@
 {
-  "name": "exegesis-typescript-example",
+  "name": "exegesis-typescript-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,14 +19,21 @@
     "lint": "tslint '{src,test}/**/*.{ts,tsx}' -p .",
     "lint:fix": "tslint --project tsconfig.lint.json --fix"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "OpenAPI",
+    "swagger",
+    "OAS3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lordoffreaks/exegesis-boilerplate-typescript.git"
+  },
+  "author": "Alejandro Tabares",
   "license": "ISC",
   "dependencies": {
     "exegesis": "^2.0.1",
     "exegesis-express": "^1.0.0",
-    "express": "^4.16.3",
-    "js-yaml": "^3.13.1"
+    "express": "^4.16.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.0",
@@ -38,6 +45,7 @@
     "express-openapi-validate": "^0.4.4",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
+    "js-yaml": "^3.13.1",
     "lint-staged": "^8.2.1",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
