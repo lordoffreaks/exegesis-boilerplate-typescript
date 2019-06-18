@@ -9,7 +9,7 @@
     "test": "jest",
     "prebuild": "rm -rf dist",
     "build": "tsc && cp openapi.yaml dist",
-    "dev": "ts-node ./server.ts",
+    "dev": "ts-node ./src/server.ts",
     "prestart": "npm run build",
     "start": "nodemon ./dist/server-compile.js",
     "prod": "npm run build && npm run start",

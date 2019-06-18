@@ -2,7 +2,7 @@ import { OpenApiValidator } from 'express-openapi-validate'
 import fs from 'fs'
 import jsYaml from 'js-yaml'
 import request from 'supertest'
-import { createApp } from '../../app'
+import { createApp } from '../../src/app'
 
 const openApiDocument = jsYaml.safeLoad(
   fs.readFileSync('openapi.yaml', 'utf-8')

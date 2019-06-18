@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    environment:
+      - PORT=3000
+      - LOG_LEVEL=info
+      - NODE_ENV=dev
+      - LOG_LEVEL=debug
+    ports:
+      - "3000:3000"
+      - "5858:5858"
