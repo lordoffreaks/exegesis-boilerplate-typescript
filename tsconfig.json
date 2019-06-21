@@ -17,5 +17,9 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "esModuleInterop": true
-    }
+    },
+    "include": [
+      "src/**/*",
+      "typings/**/*"
+    ]
 }

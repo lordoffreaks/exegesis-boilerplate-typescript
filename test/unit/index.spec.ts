@@ -18,8 +18,10 @@ describe('App', () => {
   test('/greet responses', async () => {
     const validateResponse = validator.validateResponse('get', '/greet')
 
-    const res = await request(app).get('/greet?name=Alex')
-    // .send({})
+    const res = await request(app)
+      .get('/greet')
+      .query({ name: 'alex' })
+
     const result = validateResponse(res)
     expect(result).toBeUndefined()
   })

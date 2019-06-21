@@ -1,23 +1,24 @@
 {
-  "name": "exegesis-typescript-boilerplate",
+  "name": "exegesis-boilerplate-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.ts",
   "scripts": {
     "check": "tsc -p tsconfig.json --noEmit",
-    "_pretest": "npm run check",
+    "pretest": "npm run check",
     "test": "jest",
     "prebuild": "rm -rf dist",
     "build": "tsc && cp openapi.yaml dist",
-    "dev": "ts-node ./src/server.ts",
     "prestart": "npm run build",
-    "start": "nodemon ./dist/server-compile.js",
+    "start": "node ./dist",
     "prod": "npm run build && npm run start",
     "format": "prettier --list-different '**/*.{js,ts,tsx}'",
     "format:fix": "prettier --write '**/*.{js,ts,tsx}'",
     "fix": "npm run lint:fix && npm run format:fix",
     "lint": "tslint '{src,test}/**/*.{ts,tsx}' -p .",
-    "lint:fix": "tslint --project tsconfig.lint.json --fix"
+    "lint:fix": "tslint --project tsconfig.lint.json --fix",
+    "predev": "npm run build",
+    "dev": "tsc-watch --sourceMap --onSuccess \"node dist\""
   },
   "keywords": [
     "OpenAPI",
@@ -53,6 +54,7 @@
     "ts-jest": "^24.0.2",
     "ts-lint": "^4.5.1",
     "ts-node": "^8.3.0",
+    "tsc-watch": "^2.2.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.5.2"
