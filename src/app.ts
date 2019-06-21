@@ -12,7 +12,7 @@ export const createApp = async () => {
   // This creates an exgesis middleware, which can be used with express,
   // connect, or even just by itself.
   const exegesisMiddleware = await middleware(
-    path.resolve(__dirname, '../openapi.yaml'),
+    path.resolve(__dirname, 'openapi.yaml'),
     options
   )
 

@@ -5,7 +5,7 @@ import request from 'supertest'
 import { createApp } from '../../src/app'
 
 const openApiDocument = jsYaml.safeLoad(
-  fs.readFileSync('openapi.yaml', 'utf-8')
+  fs.readFileSync('src/openapi.yaml', 'utf-8')
 )
 const validator = new OpenApiValidator(openApiDocument)
 
