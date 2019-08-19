@@ -47,7 +47,7 @@
     "husky": "^2.4.1",
     "jest": "^24.8.0",
     "js-yaml": "^3.13.1",
-    "lint-staged": "^8.2.1",
+    "lint-staged": "^9.2.3",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
     "supertest": "^4.0.2",
