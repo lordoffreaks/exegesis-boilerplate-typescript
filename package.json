@@ -32,7 +32,7 @@
   "author": "Alejandro Tabares",
   "license": "ISC",
   "dependencies": {
-    "exegesis": "^2.0.1",
+    "exegesis": "^2.1.1",
     "exegesis-express": "^2.0.0",
     "express": "^4.16.3"
   },
