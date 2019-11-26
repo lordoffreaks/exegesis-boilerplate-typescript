@@ -1,4 +1,4 @@
-FROM node:10.16.0-alpine as node
+FROM node:13.2.0-alpine as node
 
 FROM node as base
 WORKDIR /usr/src/app/
