@@ -57,7 +57,7 @@
     "tsc-watch": "^2.2.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.5.2"
+    "typescript": "^3.7.4"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
